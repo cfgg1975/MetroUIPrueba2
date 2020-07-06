@@ -1,0 +1,59 @@
+﻿@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/metro")
+
+<div class="group-divider" style="width: 400px; margin-left:450px; margin-top: 60px">
+    <h1><small>Registro de Usuario</small></h1>
+    <form data-role="validator" action="javascript:">
+        <div class="row">
+            <div class="cell">
+                <label>Nombres</label>
+                <input type="text" data-validate="required digits length=3" name="name">
+                <span class="invalid_feedback">
+                    Ingrese el nombre con una longitud mínima de 3 carácteres.
+                </span>
+            </div>
+            <div class="cell">
+                <label>Apellidos</label>
+                <input type="text" data-validate="required digits length=3" name="surname">
+                <span class="invalid_feedback">
+                    Ingrese los apellidos con una longitud mínima de 3 carácteres.
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Dirección</label>
+            <input type="text" data-validate="required digits length=4" name="dir">
+            <span class="invalid_feedback">
+                Ingrese la dirección con una longitud mínima de 4 carácteres.
+            </span>
+        </div>
+    </form>
+</div>
+<div class="group-divider" style="width: 400px; margin-left: 450px; margin-top: 30px">
+    <h1><small>Datos de la cuenta</small></h1>
+    <form data-role="validator" action="javascript:">
+        <div class="form-group">
+            <label>Correo Electrónico</label>
+            <input type="email" data-validate="required email" name="correo">
+            <span class="invalid_feedback">
+                Ingrese dirección de correo valida.
+            </span>
+        </div>
+        <div class="form-group">
+            <label>Teléfono</label>
+            <input type="password" data-validate="required digits length=9" name="fono">
+            <span class="invalid_feedback">
+                Número de teléfono debe tener un mínimo de 9 carácteres.
+            </span>
+        </div>
+        <div class="form-group">
+            <label>Ciudad</label>
+            <input type="text" data-validate="required digits length=4" name="ciudad">
+            <span class="invalid_feedback">
+                Ingrese la ciudad con una longitud mínima de 4 carácteres.
+            </span>
+        </div>
+        <br />
+        <button class="button primary drop-shadow"><span class="mif-checkmark"></span> Registrarse</button>
+    </form>
+</div>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/metro")
+      
+
+</head>
+
+<body>
+    <header>
+        <div class="d-flex flex-justify-between app-bar flex-align-end">
+            <div class="app-bar-container float-left">
+                <a href="~/Home/" class="app-bar-item">Inicio</a>
+                <div class="pos-relative">
+                    <a class="dropdown-toggle">Comedores</a>
+                    <ul class="d-menu" data-role="dropdown">
+                        <li><a href="~/Home/Comedores">4 Personas</a></li>
+                        <li><a href="~/Home/Comedores">6 Personas</a></li>
+                        <li><a href="~/Home/Comedores">8 Personas</a></li>
+                    </ul>
+                </div>
+                <a href="~/Home/Closets" class="app-bar-item">Closets</a>
+                <a href="~/Home/Crear" class="app-bar-item">Crea tu propio mueble</a>
+                <a href="~/Home/Contact" class="app-bar-item">Contacto</a>
+            </div>
+            <div class="app-bar-container float-right ">
+                <div class="app-bar-item d-flex flex-align-center">
+                    <input class="input-small"  type="text" data-role="input"
+                           data-prepend="<span class='mif-user'></span>" data-size="200px">
+                </div>
+                <div class="app-bar-item d-flex flex-align-center">
+                    <input class="input-small" type="text" data-role="input"
+                           data-prepend="<span class='mif-key'></span>" data-size="150px">
+                </div>
+                <div class="app-bar-item d-flex flex-align-center">
+                    <button class="button drop-shadow"><span class="mif-user"></span> Ingreso</button>
+                    ""
+                    <button class="button drop-shadow"><span class="mif-user-plus"></span> Registrar</button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    @RenderBody()
+</body>
+
+
+</html>
